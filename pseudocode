@@ -1,0 +1,14 @@
+pseudocode:
+
+prot: int _printf(const char *format, ...)
+
+output: number of characters printed - no null byte
+	write output to std output - to use _printchar
+
+	format - xter string
+
+	_printf("%s",Hello World);
+
+process:
+
+

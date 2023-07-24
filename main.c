@@ -3,10 +3,11 @@
 
 int main(void)
 {
-	_printf("c\n");
-	printf("c\n");
-	_printf("%s\n", "Hello World");
-	printf("%s\n", "Hello World");
+	printf("\nPrint letter c using our _printffx - "); _printf("c\n");
+	
+	printf("\nPrint 'Hello world' using our _printffx - ");_printf("%s\n", "Hello World");
+/*	printf("%s\n", "Hello World");*/
+
 	return (0);
 
 }

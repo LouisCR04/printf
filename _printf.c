@@ -12,11 +12,11 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int length = 0;
+	int count = 0;
 
 	va_start (args, format);
-	length = _print_characters ();
+	count = _print_characters (format, args);
 
 	va_end (args);
-	return (length);
+	return (count);
 }

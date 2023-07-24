@@ -10,5 +10,29 @@ output: number of characters printed - no null byte
 	_printf("%s",Hello World);
 
 process:
+initiate va..
+call fx -_print_format(format, args)
+
+	loop (if format && format[i] is not empty)
+	{
+		if (format[i] == %s/ %c
+		{
+			if format[i+1] == null byte
+			return -1 (error)
+		}
+		i++;
+		while format[i] == ' '
+		i++
+
+		if (format[i] == %)
+		count = count + _putchar(formart[i]);
+		
+		fx validate_char(c, s, d, i, %) - if true return 1;
+		{
+			count = 
+		}
+
+	}
+
 
 

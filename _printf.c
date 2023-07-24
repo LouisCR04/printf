@@ -6,7 +6,7 @@
  *@format: A pointer to a const char that specifies format
  *
  * Return: Number of characters printed
-*This is group work
+ *This is group work
 */
 
 int _printf(const char *format, ...)

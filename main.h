@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <limits.h>
+#include <unistd.h>
+
 /**
  *_putchar - Entry point
  *This is the 1st source file that the gcc

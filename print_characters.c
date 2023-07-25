@@ -29,7 +29,7 @@ int _print_characters (const char *format, va_list args)
 		}
 		else
 		{
-			count = _putchar(format[i]);
+			count += _putchar(format[i]);
 		}
 		i++;
 	}
@@ -65,7 +65,7 @@ int print_all(char format, va_list args)
 	{
 		if (*specifiers[i].spec == format)
 		{
-			count = specifiers[i].f(args);
+			count += specifiers[i].f(args);
 		}
 		i++;
 	}

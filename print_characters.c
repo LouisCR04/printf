@@ -11,24 +11,29 @@ int _print_characters (const char *format, va_list args)
 {
 	int count = 0;
 	int i = 0;
+	char f_specifier[] = {'c','s'};
 	
 	while (format != NULL)
 	{
-		if (format[i] == %)
+		if (format[i] == '%')
 		{
 			i++;
-			if (/*next xter = a specifier*/)
+			if (f_specifier[i] == format[i])
 			{
 				count = print_all(format[i], args);
 				return (count);
 			}
-			else if(/*next xter is not a specifier*/)
+			else 
 			{
-				/*count += print %*/
-				/*count += print(format[i]*/
+				count = _putchar('%');
+				count += _putchar(format[i]);
 			}
 			return (count);
 		}
+		count = _putchar(format[i]);
+		i++;
+		return (count);
+	} 
 }
 
 int print_all(char format, va_list args)

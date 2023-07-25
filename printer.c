@@ -16,17 +16,17 @@ int charprint(va_list args)
 
 int stringprint(va_list args)
 {
-	int i = 0;
+	int n = 0;
 	char *arg = va_arg(args, char *);
 
 	if (arg != NULL)
 	{
-		while (arg[i])
+		while (arg[n])
 		{
-			_putchar(arg[i]);
-			i++;
+			_putchar(arg[n]);
+			n++;
 		}
 	}
 
-	return (i);
+	return (n);
 }

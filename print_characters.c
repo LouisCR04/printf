@@ -11,9 +11,24 @@ int _print_characters (const char *format, va_list args)
 {
 	int count = 0;
 	int i = 0;
-
-		count = print_all(format[i], args);
-		return (count);
+	
+	while (format != NULL)
+	{
+		if (format[i] == %)
+		{
+			i++;
+			if (/*next xter = a specifier*/)
+			{
+				count = print_all(format[i], args);
+				return (count);
+			}
+			else if(/*next xter is not a specifier*/)
+			{
+				/*count += print %*/
+				/*count += print(format[i]*/
+			}
+			return (count);
+		}
 }
 
 int print_all(char format, va_list args)

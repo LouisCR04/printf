@@ -49,6 +49,7 @@ int decimalprint(va_list args)
 	{
 		_putchar('-');
 		count++;
+		m = -m;
 	}
 	if (m == 0)
 	{

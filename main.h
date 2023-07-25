@@ -19,6 +19,8 @@ int _printf(const char *format, ...);
 
 int _print_characters (const char *format, va_list args);
 
+int head_spec(char format);
+
 int charprint(va_list args);
 
 int stringprint(va_list args);

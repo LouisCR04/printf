@@ -43,7 +43,7 @@ int _print_characters (const char *format, va_list args)
 
 int head_spec(char format)
 {
-	char f_specifier[] = {'%','c', 's', 'd'};
+	char f_specifier[] = {'%','c', 's', 'd', 'i'};
  	int i;
 	
 	for (i = 0;f_specifier[i]; i++)
@@ -63,6 +63,7 @@ int print_all(char format, va_list args)
 		{"c", charprint},
 		{"s", stringprint},
 		{"d", decimalprint},
+		{"i", decimalprint},
 		{NULL, NULL}
 	};
 

@@ -3,15 +3,17 @@
 
 
 /**
- *_print_characters - prints a format
- *@format : the format to print
- *return : counts of the format
+ *_print_characters - main print fx caller
+ *@format: specifier to check the argument list
+ *@args: Arguments passed from _printf()
+ *
+ *Return: count of xters printed
  */
-int _print_characters (const char *format, va_list args)
+int _print_characters(const char *format, va_list args)
 {
 	int count = 0;
 	int i = 0;
-	
+
 	while (format != NULL && format[i] != 0)
 	{
 		if (format[i] == '%')
@@ -38,15 +40,21 @@ int _print_characters (const char *format, va_list args)
 		}
 		i++;
 	}
-       return (count);	
+	return (count);
 }
 
+/**
+ *head_spec - Checks if letter after % sign is a specifier
+ *
+ *@format: letter after % sign
+ *Return: 1 if specifier else 0
+ */
 int head_spec(char format)
 {
-	char f_specifier[] = {'%','c', 's', 'd', 'i'};
- 	int i;
-	
-	for (i = 0;f_specifier[i]; i++)
+	char f_specifier[] = {'%', 'c', 's', 'd', 'i'};
+	int i;
+
+	for (i = 0; f_specifier[i]; i++)
 	{
 		if (f_specifier[i] == format)
 			return (1);
@@ -54,6 +62,13 @@ int head_spec(char format)
 	return (0);
 }
 
+/**
+ *print_all - Calls a fx in correspondence to the specifier
+ *@format: letter after % sign
+ *@args: Arguments to print
+ *
+ *Return: no. of letters printed
+ */
 int print_all(char format, va_list args)
 {
 	int i = 0;

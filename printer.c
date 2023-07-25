@@ -15,6 +15,12 @@ int charprint(va_list args)
 	return (1);
 }
 
+/**
+ *stringprint - Prints a string
+ *@args: Arguments passed to be printed to std output
+ *
+ * Return: count of xters printed
+ */
 int stringprint(va_list args)
 {
 	int n = 0;
@@ -32,6 +38,12 @@ int stringprint(va_list args)
 	return (n);
 }
 
+/**
+ *decimalprint - Prints a decimal
+ *@args: Arguments passed to be printed to std output
+ *
+ * Return: count of xters printed
+ */
 int decimalprint(va_list args)
 {
 	int m = va_arg(args, int);

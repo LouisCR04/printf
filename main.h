@@ -7,19 +7,16 @@
 #include <unistd.h>
 
 /**
- *_putchar - Entry point
- *This is the 1st source file that the gcc
- *is compiling and will be linked to the 0-putchar.c file
- *Just outputs a single character to the console
+ *_putchar - Prints a character to the std output
  *@c: any single character
  *
- * Return:A single character
+ * Return: 1 if succesfull
  */
 int _putchar(char c);
 
 int _printf(const char *format, ...);
 
-int _print_characters (const char *format, va_list args);
+int _print_characters(const char *format, va_list args);
 
 int head_spec(char format);
 
@@ -31,10 +28,15 @@ int decimalprint(va_list args);
 
 int print_all(char format, va_list args);
 
-typedef struct specs 
+/**
+ *struct specs - Defines format specifiers
+ *@spec: format specifiers
+ *@f: function in accordance to specifier
+ */
+typedef struct specs
 {
 	char *spec;
 	int (*f)(va_list args);
-}spec;
+} spec;
 
 #endif

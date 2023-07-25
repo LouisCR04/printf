@@ -14,9 +14,9 @@ int _printf(const char *format, ...)
 	va_list args;
 	int count = 0;
 
-	va_start (args, format);
-	count = _print_characters (format, args);
+	va_start(args, format);
+	count = _print_characters(format, args);
 
-	va_end (args);
+	va_end(args);
 	return (count);
 }

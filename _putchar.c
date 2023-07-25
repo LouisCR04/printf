@@ -1,13 +1,10 @@
-#include <unistd.h> 
+#include <unistd.h>
 
 /**
- *_putchar - Entry point
- *This is the 1st source file that the gcc
- *is compiling and will be linked to the 0-putchar.c file
- *Just outputs a single character to the console
+ *_putchar - Prints a character to the std output
  *@c: any single character
  *
- * Return:A single character
+ * Return: 1 if succesfull
  */
 int _putchar(char c)
 {

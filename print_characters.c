@@ -25,10 +25,7 @@ int _print_characters (const char *format, va_list args)
 			if (head_spec(format[i]))
 			{
 				count += print_all(format[i], args);
-			}
-			else 
-			{
-				count += _putchar(format[i]);
+				i++;
 			}
 		}
 		else

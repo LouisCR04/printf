@@ -30,3 +30,13 @@ int stringprint(va_list args)
 
 	return (n);
 }
+
+int decimalprint(va_list args)
+{
+	int n;
+
+	n = va_arg(args, int);
+	n = 0;
+
+	return (n);
+}

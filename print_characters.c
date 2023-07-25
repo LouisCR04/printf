@@ -11,7 +11,7 @@ int _print_characters (const char *format, va_list args)
 {
 	int count = 0;
 	int i = 0;
-	char f_specifier[] = {'c','s'};
+	char f_specifier[] = {'%','c', 's', 'd'};
 	
 	while (format != NULL && format[i] != 0)
 	{
@@ -29,12 +29,14 @@ int _print_characters (const char *format, va_list args)
 			}
 			else 
 			{
-				count += _putchar('%');
 				count += _putchar(format[i]);
 			}
 		}
-		count = _putchar(format[i]);
-		i++;
+		else
+		{
+			count = _putchar(format[i]);
+			i++;
+		}
 	}
        return (count);	
 }
@@ -47,6 +49,7 @@ int print_all(char format, va_list args)
 	spec specifiers[] = {
 		{"c", charprint},
 		{"s", stringprint},
+		{"d", decimalprint},
 		{NULL, NULL}
 	};
 

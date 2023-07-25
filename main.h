@@ -23,6 +23,8 @@ int charprint(va_list args);
 
 int stringprint(va_list args);
 
+int decimalprint(va_list args);
+
 int print_all(char format, va_list args);
 
 typedef struct specs 

@@ -21,18 +21,15 @@ int _print_characters (const char *format, va_list args)
 			if (f_specifier[i] == format[i])
 			{
 				count = print_all(format[i], args);
-				return (count);
 			}
 			else 
 			{
 				count = _putchar('%');
 				count += _putchar(format[i]);
 			}
-			return (count);
 		}
 		count = _putchar(format[i]);
 		i++;
-		return (count);
 	}
        return (count);	
 }

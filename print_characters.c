@@ -33,7 +33,8 @@ int _print_characters (const char *format, va_list args)
 		count = _putchar(format[i]);
 		i++;
 		return (count);
-	} 
+	}
+       return (count);	
 }
 
 int print_all(char format, va_list args)
